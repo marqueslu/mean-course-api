@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const postsRoutes = require("./routes/posts");
-const usersRoutes = require("./routes/users");
+const usersRoutes = require("./routes/user");
 const app = express();
 
 mongoose
@@ -38,6 +38,6 @@ app.use((req, res, next) => {
 });
 
 app.use("/api/posts", postsRoutes);
-app.use("/api/users", usersRoutes);
+app.use("/api/user", usersRoutes);
 
 module.exports = app;
